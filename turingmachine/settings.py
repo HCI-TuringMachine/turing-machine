@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rating'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -82,7 +83,14 @@ WSGI_APPLICATION = 'turingmachine.wsgi.application'
 #     }
 # }
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "turingmachine_dev",
+        "USER": "root",
+        "PASSWORD": "root",
+        "HOST": "localhost",
+        "PORT": "3306"
+    }
 }
 
 # Internationalization
